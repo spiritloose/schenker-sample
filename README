@@ -1,0 +1,45 @@
+Schenker sample application
+
+* Requirements
+
+** sqlite3
+** Schenker
+** DBD::SQLite
+** DBIx::Class::Schema::Loader
+
+* Setup
+
+Type `make migrate` and `make ENVIRONMENT=production migrate`.
+
+* How to run
+
+** Standalone
+
+Type `./sample.pl`.
+`./sample.pl --help` for more information.
+
+** Lighttpd
+
+*** Standalone server mode
+
+Type `lighttpd -f etc/lighty.conf`.
+
+*** Static mode
+
+Type `./sample.pl -s FCGI -l log/sample.socket` and `lighttpd -f etc/lighty_external_fcgi.conf`.
+
+*** mod_perl
+
+Type apachectl -f `pwd`/etc/mod_perl.conf.
+
+
+And you can access this application by accessing http://localhost:4567/ with your browser.
+
+* License
+
+this library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+* Author
+
+jiro Nishiguchi <jiro@cpan.org>

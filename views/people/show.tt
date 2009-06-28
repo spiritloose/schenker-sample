@@ -1,0 +1,12 @@
+<p>
+  <b>Name:</b>
+  [% person.name | html %]
+</p>
+
+<p>
+  <b>Age:</b>
+  [% person.age | html %]
+</p>
+
+<a href="/people/[% person.id %]/edit">Edit</a> |
+<a href="/people/">Back</a>

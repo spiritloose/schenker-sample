@@ -1,0 +1,19 @@
+<h1>Editing person</h1>
+
+<form action="/people/[% person.id %]" method="post">
+<input type="hidden" name="_method" value="PUT" />
+  <p>
+    Name<br />
+    <input type="text" name="person[name]" value="[% person.name | html %]" />
+  </p>
+  <p>
+    Age<br />
+    <input type="text" name="person[age]" value="[% person.age | html %]" />
+  </p>
+  <p>
+    <input type="submit" value="Update" />
+  </p>
+</form>
+
+<a href="/people/[% people.id %]">Show</a> |
+<a href="/people/">Back</a>

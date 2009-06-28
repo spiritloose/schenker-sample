@@ -1,0 +1,17 @@
+<h1>New person</h1>
+
+<form action="/people/" method="post">
+  <p>
+    Name<br />
+    <input type="text" name="person[name]" />
+  </p>
+  <p>
+    Age<br />
+    <input type="text" name="person[age]" />
+  </p>
+  <p>
+    <input type="submit" value="Create" />
+  </p>
+</form>
+
+<a href="/people/">Back</a>
